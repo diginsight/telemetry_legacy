@@ -5,6 +5,13 @@ Also, __Common.Diagnostics__ publishes application flow structure and metrics to
 
 This makes the application flow fully observable, __still without compromises on performance__.<br>
 
+> __diginsight v3 is now available__ at the following repo: [https://github.com/diginsight/telemetry](https://github.com/diginsight/telemetry)<br>
+> Features such as old frameworks support (eg. .Net Framework 4.5+) or observability for startup and static sections may still have limited support on Diginsight v3.<br>
+> In these cases the developer may decide to keep the old model from this repository.<br>
+> Diginsight v2 will not be discontinued until feature parity is reached.<br>
+> Documentation about v2 packages is still available here [Diginsight v2 documentation](<docs/articles/v2/README.md>).<br>
+
+
 # APPLICATION OBSERVABILITY CONCEPTS 
 __Application observability__ is about aggregating, correlating and analyzing the following key elements:<br>
 -  __Logs__ with application execution details and data.
