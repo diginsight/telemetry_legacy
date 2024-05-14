@@ -44,7 +44,7 @@ jobs:
         run: |
             $env:VERSION_PREFIX="${{ env.versionPrefix }}"
             $env:BUILD_NUMBER="${{ github.run_number }}"
-            $varsContext = ConvertFrom-Json "${{ env.VARS_CONTEXT }}"
+            $varsContext = ${{ toJson(vars) }}
             $env:BUILD_NUMBER_OFFSET = $varsContext.BUILD_NUMBER_OFFSET
             Write-Host "VERSION_PREFIX=$env:VERSION_PREFIX"
             Write-Host "BUILD_NUMBER=$env:BUILD_NUMBER"
@@ -64,7 +64,7 @@ jobs:
             $env:VERSION_PREFIX="${{ steps.get_build_number.outputs.VERSION_PREFIX }}"
             Write-Host "get_build_number.outputs.BUILD_NUMBER: ${{ steps.get_build_number.outputs.BUILD_NUMBER }}"
             $env:BUILD_NUMBER="${{ steps.get_build_number.outputs.BUILD_NUMBER }}"
-            $varsContext = ConvertFrom-Json "${{ env.VARS_CONTEXT }}"
+            $varsContext = ${{ toJson(vars) }}
             $env:BUILD_NUMBER_OFFSET = $varsContext.BUILD_NUMBER_OFFSET
             Write-Host "BUILD_NUMBER_OFFSET=$env:BUILD_NUMBER_OFFSET"
             $env:BUILD_NUMBER_ADJUSTED=[int]$env:BUILD_NUMBER + [int]$env:BUILD_NUMBER_OFFSET
