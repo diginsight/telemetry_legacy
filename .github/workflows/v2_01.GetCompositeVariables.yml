@@ -38,9 +38,9 @@ jobs:
           echo "solution=$env:solution"
 
       - name: Get build number
-        id: get_build_number
         env:
           VARS_CONTEXT: ${{ toJson(vars) }}
+        id: get_build_number
         run: |
             $env:VERSION_PREFIX="${{ env.versionPrefix }}"
             $env:BUILD_NUMBER="${{ github.run_number }}"
@@ -56,9 +56,9 @@ jobs:
             echo "::set-output name=VERSION_PREFIX::$env:VERSION_PREFIX"
 
       - name: Get Assembly Version
-        id: get_assembly_version
         env:
           VARS_CONTEXT: ${{ toJson(vars) }}
+        id: get_assembly_version
         run: |
             Write-Host "get_build_number.outputs.VERSION_PREFIX: ${{ steps.get_build_number.outputs.VERSION_PREFIX }}"
             $env:VERSION_PREFIX="${{ steps.get_build_number.outputs.VERSION_PREFIX }}"
