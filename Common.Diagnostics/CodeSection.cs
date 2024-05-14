@@ -16,7 +16,7 @@ using System.IO;
 using System.Text.Json.Serialization;
 #endregion
 
-namespace Common
+namespace Common 
 {
     public class CodeSection : CodeSectionBase, IDisposable, ICloneable, ICodeSectionLogger
     { 
