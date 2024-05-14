@@ -11,6 +11,8 @@ on:
       - main
     paths:
       - 'Common.**'
+  workflow_dispatch:
+  
 jobs:
   installActions:
     uses: ./.github/workflows/v2_00.InstallActions.yml
