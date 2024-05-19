@@ -4,9 +4,9 @@
     ".NETStandard,Version=v2.0": {
       "Microsoft.Identity.Client": {
         "type": "Direct",
-        "requested": "[4.60.3, )",
-        "resolved": "4.60.3",
-        "contentHash": "jve1RzmSpBhGlqMzPva6VfRbLMLZZc1Q8WRVZf8+iEruQkBgDTJPq8OeTehcY4GGYG1j6UB1xVofVE+n4BLDdw==",
+        "requested": "[4.61.0, )",
+        "resolved": "4.61.0",
+        "contentHash": "3TDPEie+9t/NgBhoNifLFwM6nkypYUa8GUHfMnkYtovDDTQM8bsS2KEIP5tAh28BgfJZgof/KlCEKvGxz0H3Eg==",
         "dependencies": {
           "Microsoft.IdentityModel.Abstractions": "6.35.0",
           "System.Diagnostics.DiagnosticSource": "6.0.1"
