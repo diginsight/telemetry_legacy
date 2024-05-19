@@ -138,7 +138,7 @@ namespace Common
                     // var loggerFactory = TraceLogger.LoggerFactory;
                     // logger = loggerFactory.CreateLogger(loggerType);
 
-                    logger.Log<TraceEntry>(entry.LogLevel, new EventId(0, entry.RequestContext?.RequestId), entry, entry.Exception, DefaultFormatTraceEntry.FormatTraceEntry); // formatTraceEntry
+                    logger?.Log<TraceEntry>(entry.LogLevel, new EventId(0, entry.RequestContext?.RequestId), entry, entry.Exception, DefaultFormatTraceEntry.FormatTraceEntry); // formatTraceEntry
                 }
             });
         }
